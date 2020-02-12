@@ -1,0 +1,26 @@
+package com.cpg.discount;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class UserInterface {
+	Map<String, >
+	public static void maia(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Scanner sc1=new Scanner(System.in);
+		
+		int noOfProducts=sc.nextInt();
+	    String products[]=new String[noOfProducts];
+	    
+	    for(int i=0; i<noOfProducts; ++i) {
+	    	products[i]=sc1.next();
+	    }
+	    
+	    
+	    sc.close();
+	    sc1.close();
+	}
+	
+	
+}

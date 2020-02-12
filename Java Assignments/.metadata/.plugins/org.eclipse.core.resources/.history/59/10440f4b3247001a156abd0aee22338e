@@ -1,0 +1,39 @@
+package com.cpg.lab10.streamcasestudy;
+
+//import java.time.LocalDate;
+import java.util.ArrayList;
+//import java.util.Arrays;
+//import java.util.List;
+
+public class Employee extends Department{
+	
+	ArrayList<Integer> employeeId=new ArrayList<>();
+	ArrayList<String> firstname=new ArrayList<>();
+	ArrayList<String> lastName=new ArrayList<>();
+	ArrayList<String> email=new ArrayList<>();
+	ArrayList<String> phoneNumber=new ArrayList<>();
+	ArrayList<String> designation=new ArrayList<>();
+	ArrayList<Double> salary=new ArrayList<>();
+	//ArrayList<LocalDate> hireDate=new ArrayList<>();
+	ArrayList<Integer> managerId=new ArrayList<>();
+	
+	public Employee(ArrayList<Integer> deptId, ArrayList<String> deptName, ArrayList<Integer> managerId,
+			ArrayList<Integer> employeeId, ArrayList<String> firstname, ArrayList<String> lastName,
+			ArrayList<String> email, ArrayList<String> phoneNumber, ArrayList<String> designation,
+			ArrayList<Double> salary, ArrayList<Integer> managerId2) {
+		super(deptId, deptName, managerId);
+		this.employeeId = employeeId;
+		this.firstname = firstname;
+		this.lastName = lastName;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.designation = designation;
+		this.salary = salary;
+		managerId = managerId2;
+	}
+	
+	static void display() {
+		System.out.println("deptId = "+deptId);
+		System.out.println("deptName = "+deptName);
+	}
+}

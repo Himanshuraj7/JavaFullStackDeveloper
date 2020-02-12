@@ -1,0 +1,52 @@
+package com.cpg.lab8.exercise1;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class CopyDataThread {
+	FileReader fr;
+	FileWriter fw;
+	
+	CopyDataThread(FileReader fr, FileWriter fw){
+		this.fr=fr;
+		this.fw=fw;
+	}
+	
+	void writeFile() throws IOException{
+		try {
+		  fw.write("hello world");
+		  fw.write("himanshu");
+	      System.out.println("Successfully wrote to the file.");
+		}
+		catch (IOException e) {
+		  System.out.println("An error occurred.");
+		  e.printStackTrace();
+		}
+		finally {
+			fw.close();
+		}
+	}
+
+	void readFile() throws IOException{
+		try {
+	    int i; 
+		while ((i=fr.read()) != -1) 
+			System.out.print((char) i);
+		}
+		catch(IOException e) {
+			System.out.println("file not found");
+		}
+		finally {
+			fr.close();
+		}
+	}
+	
+	@Override
+	public void run() {
+		
+		System.out.println("Thread execution started");
+		
+	}
+}

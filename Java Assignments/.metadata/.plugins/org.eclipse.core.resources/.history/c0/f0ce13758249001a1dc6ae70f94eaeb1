@@ -1,0 +1,22 @@
+package com.cpg.calldetails;
+
+import java.util.Scanner;
+
+public class UserInterface {
+	
+public static void main(String [] args) {
+	Scanner sc=new Scanner(System.in);
+	String input=sc.nextLine();
+	long calledNumber=sc.nextLong();
+	
+	Call call=new Call();
+	call.parsedata(input);
+	
+	CallHistory callhistory=new CallHistory();
+	callhistory.addCal(call);
+	//callhistory.findTotalDuarion(calledNumber);
+	
+	System.out.println(callhistory.findTotalDuarion(calledNumber));
+	sc.close();
+}
+}

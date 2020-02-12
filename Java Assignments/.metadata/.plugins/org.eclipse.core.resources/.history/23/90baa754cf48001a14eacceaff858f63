@@ -1,0 +1,11 @@
+package com.cg.jdbcConDemo.ui;
+
+import com.cs.jdbcConDemo.dao.BDConnection;
+import java.sql.Connection;
+
+public class EmployeeUI {
+	public static void main(String[] args) {
+		Connection con=BDConnection.getConnection();
+		System.out.println(con);
+	}
+}

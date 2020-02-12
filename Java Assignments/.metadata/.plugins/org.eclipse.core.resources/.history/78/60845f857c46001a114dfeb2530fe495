@@ -1,0 +1,19 @@
+package com.cpg.lab8.exercise1;
+
+class A
+{ int a=10;
+  public void m1()
+  { System.out.println("A"); }
+}
+public class dummy extends A
+{ int a=20;
+  public void m1()
+  { System.out.println("B"); }
+ 
+ public static void main(String []args)
+ {
+   A a = new dummy();
+   a.m1();
+   System.out.println(a.a);
+ }
+}

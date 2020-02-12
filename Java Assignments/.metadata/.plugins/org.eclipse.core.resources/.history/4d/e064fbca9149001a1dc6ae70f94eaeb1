@@ -1,0 +1,25 @@
+package com.cpg.fancyshop;
+
+import java.util.Scanner;
+
+public class UserInterface {
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	Scanner sc1=new Scanner(System.in);
+	
+	int size=sc.nextInt();
+	int key;
+	String value;
+	Shop obj=new Shop();
+	
+	for(int i=0; i<size; ++i) {
+		key=sc.nextInt();
+		value=sc1.nextLine();
+		obj.addProductDetails(key, value);
+	}
+	
+	String search=sc1.nextLine();
+	
+	System.out.println(obj.searchBasedOnProduct(search));
+}
+}

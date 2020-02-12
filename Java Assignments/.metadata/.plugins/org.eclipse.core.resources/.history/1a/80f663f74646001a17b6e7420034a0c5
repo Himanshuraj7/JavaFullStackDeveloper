@@ -1,0 +1,23 @@
+package com.cpg.lab8.exercise1;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileProgram extends Thread{
+	
+	public static void main(String[] args) throws IOException{
+		File sf=new File("source.txt");
+		File tf=new File("target.txt");
+		
+		FileReader fr=new FileReader(sf);
+		FileWriter fww=new FileWriter(sf);	
+		FileWriter fw=new FileWriter(tf);	
+		
+		CopyDataThread cdt=new CopyDataThread(fr, fw, fww);
+		cdt.writeFile();
+		
+		new FileProgram().start();
+	}
+}

@@ -1,0 +1,52 @@
+package com.cpg.lab10.streamcasestudy;
+
+//import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class EmployeeRepository extends Employee {
+	
+	public EmployeeRepository(ArrayList<Integer> deptId, ArrayList<String> deptName, ArrayList<Integer> managerId,
+			ArrayList<Integer> employeeId, ArrayList<String> firstname, ArrayList<String> lastName,
+			ArrayList<String> email, ArrayList<String> phoneNumber, ArrayList<String> designation,
+			ArrayList<Double> salary, ArrayList<Integer> managerId2, ArrayList<Integer> deptId2,
+			ArrayList<String> deptName2, ArrayList<Integer> managerId3, ArrayList<Integer> employeeId2,
+			ArrayList<String> firstname2, ArrayList<String> lastName2, ArrayList<String> email2,
+			ArrayList<String> phoneNumber2, ArrayList<String> designation2, ArrayList<Double> salary2,
+			ArrayList<Integer> managerIdemployee) {
+		super(deptId, deptName, managerId, employeeId, firstname, lastName, email, phoneNumber, designation, salary,
+				managerId2);
+	}
+	
+	public EmployeeRepository() {
+		super();
+	}
+
+	public static void main(String [] args) {
+		
+		// values for Department class
+		ArrayList<Integer> deptId=(ArrayList<Integer>) Arrays.asList(1, 2, 3, 4);
+		ArrayList<String> deptName=(ArrayList<String>) Arrays.asList("cse", "ece", "mec", "civil");
+		ArrayList<Integer> managerId=(ArrayList<Integer>) Arrays.asList(11);
+		
+		// values for Employee class
+		ArrayList<Integer> employeeId=(ArrayList<Integer>) Arrays.asList(222, 333, 444);
+		ArrayList<String> firstname=(ArrayList<String>) Arrays.asList("himanshu", "sachin", "vishal", "ashish");
+		ArrayList<String> lastName=(ArrayList<String>) Arrays.asList("raj", "kantiwal", "malpani", "kumar");
+		ArrayList<String> email=(ArrayList<String>) Arrays.asList("h@gmail.com", "s@gmail.com", "v@gmail.com", "a@gmail.com");
+		ArrayList<String> phoneNumber=(ArrayList<String>) Arrays.asList("1234567890", "9876548910", "5463782904", "993476082");
+		ArrayList<String> designation=(ArrayList<String>) Arrays.asList("manager", "peon", "developer", "developer");
+		ArrayList<Double> salary=(ArrayList<Double>) Arrays.asList(100000.25, 50.05, 5050.12, 5050.12);
+		//ArrayList<LocalDate> hireDate=(ArrayList<LocalDate>) Arrays.asList();
+		ArrayList<Integer> managerIdemployee=(ArrayList<Integer>) Arrays.asList(11);
+		
+		
+		
+		
+		
+		Employee ob=new EmployeeRepository();
+		ob.display();
+		
+	}
+
+}

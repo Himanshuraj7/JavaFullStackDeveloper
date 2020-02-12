@@ -1,0 +1,24 @@
+package com.cpg.addition.main;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import com.cpg.addition.Addition;
+
+public class AdditionTest {
+
+	@Test
+	public void test() {
+		//fail("Not yet implemented");
+		
+	}
+	
+	@Test
+	void aditionTest()
+	{
+		Addition ob=new Addition();
+		assertEquals(4, ob.addition(1, 2),"Addition is Wrong");
+	}
+
+}

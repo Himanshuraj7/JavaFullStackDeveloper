@@ -1,0 +1,61 @@
+package com.cpg.lab6.exercise7;
+
+import java.io.*;
+
+public class File1{
+		File f=new File("file1.txt");
+		
+		
+void writeFile() throws IOException{
+	FileWriter fw = new FileWriter(f);
+	try {
+	  fw.write("hello world");
+	  fw.write("himanshu");
+      System.out.println("Successfully wrote to the file.");
+	}
+	catch (IOException e) {
+	  System.out.println("An error occurred.");
+	  e.printStackTrace();
+	}
+	finally {
+		fw.close(); // if we do not close the writing object then we might get error in reading
+	}
+}
+
+void readFile() throws IOException{
+	FileReader fr=new FileReader(f);
+	try {
+    int i; 
+	while ((i=fr.read()) != -1) 
+		System.out.print((char) i);
+	}
+	catch(IOException e) {
+		System.out.println("file not found");
+	}
+	finally {
+		System.out.println();
+		fr.close();
+	}
+}
+
+void function() {
+		System.out.println(f.exists());
+		System.out.println(f.isFile());
+		System.out.println(f.canRead());
+		System.out.println(f.canWrite());
+		System.out.println(f.isDirectory());
+		System.out.println(f.getName());
+		System.out.println(f.getParent());
+		System.out.println(f.getPath());
+		System.out.println(f.lastModified());
+		System.out.println(f.isHidden());
+		System.out.println(f.getAbsolutePath());
+		System.out.println(f.delete());
+		
+		if(f.exists())
+			System.out.println("file is open");
+		
+		else
+			System.out.println("file does not exist");
+	}
+}

@@ -1,0 +1,9 @@
+package com.cpg.lab5.exceptions;
+
+public class MyException extends Exception{
+	
+
+	 MyException(String s) {
+		super(s);
+	}
+}

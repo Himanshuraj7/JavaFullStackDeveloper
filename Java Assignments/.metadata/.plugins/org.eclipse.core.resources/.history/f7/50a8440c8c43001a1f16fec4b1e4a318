@@ -1,0 +1,7 @@
+package com.cpg.addition;
+
+public class Addition {
+	string fun() {
+		return "string";
+	}
+}

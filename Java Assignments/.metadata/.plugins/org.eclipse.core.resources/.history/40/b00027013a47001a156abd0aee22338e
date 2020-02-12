@@ -1,0 +1,21 @@
+package com.cpg.lab10.streamcasestudy;
+
+import java.util.ArrayList;
+
+public class Department {
+	public Department() {
+		
+	}
+	
+	ArrayList<Integer> deptId=new ArrayList<>();
+	ArrayList<String> deptName=new ArrayList<>();
+	ArrayList<Integer> managerId=new ArrayList<>();
+	
+	public Department(ArrayList<Integer> deptId, ArrayList<String> deptName, ArrayList<Integer> managerId) {
+		this.deptId = deptId;
+		this.deptName = deptName;
+		this.managerId = managerId;
+	}
+	
+	
+}

@@ -1,0 +1,8 @@
+package com.cpg.lab10.exercise1;
+
+import java.util.Scanner;
+
+public class LambaXPowerY {
+	Scanner sc=new Scanner(System.in);
+	
+}

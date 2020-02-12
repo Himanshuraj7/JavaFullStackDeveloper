@@ -1,0 +1,45 @@
+package com.cpg.lab8.exercise1;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class CopyDataThread implements Runnable {
+	FileReader fr;
+	FileWriter fw;
+	FileWriter fww;
+	
+	CopyDataThread(FileReader fr, FileWriter fw, FileWriter fww){
+		this.fr=fr;
+		this.fw=fw;
+		this.fww=fww;
+	}
+	
+	void writeFile() throws IOException{
+		try {
+		  fww.write("hello world");
+		  fww.write("himanshu");
+	      System.out.println("Successfully wrote to the file.");
+		}
+		catch (IOException e) {
+		  System.out.println("An error occurred.");
+		  e.printStackTrace();
+		}
+		finally {
+			fww.close();
+		}
+	}
+	
+	@Override
+	public void run(){
+		System.out.println("Thread execution started");
+		try {
+		    int i; 
+			while ((i=fr.read()) != -1) 
+				fw.write((char) i);
+			}
+			catch(IOException e) {
+				System.out.println("file not found");
+			}	
+	}
+}

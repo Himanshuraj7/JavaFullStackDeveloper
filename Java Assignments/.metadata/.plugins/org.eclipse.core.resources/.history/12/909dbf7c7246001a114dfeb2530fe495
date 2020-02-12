@@ -1,0 +1,13 @@
+package com.cpg.lab8.exercise1;
+
+class Super{
+    int x;
+}
+class dummy extends Super{
+	
+	public static void main(String[] args) {
+		dummy x=new dummy();
+		Super y=new Super();
+		x=(sub) y;
+	}
+}
